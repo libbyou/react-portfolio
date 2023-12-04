@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import NavTabs from './NavTabs';
-import Projects from './pages/Projects';
-import About from './pages/About';
-import Resume from './pages/Resume';
-import Contact from './pages/Contact';
+import Projects from '../pages/Projects';
+import About from '../pages/About';
+import Resume from '../pages/Resume';
+import Contact from '../pages/Contact';
 
 export default function PortfolioContainer() {
   const [currentPage, setCurrentPage] = useState('About');
@@ -27,6 +27,7 @@ export default function PortfolioContainer() {
   return (
     <div>
       <header>
+          <h1>Libby You</h1>
           {/* We are passing the currentPage from state and the function to update it */}
           <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
       </header>
