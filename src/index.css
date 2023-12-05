@@ -1,1 +1,16 @@
+body {
+  background-image: url('./assets/background.png');
+  background-size: 100% 100%;
+}
 
+.icon {
+  width: 60px;
+  margin: 20px 55px;
+}
+
+.navbar a{
+  color: white;
+  font-size: 100%;
+  padding: 20px;
+  text-decoration: none;
+}

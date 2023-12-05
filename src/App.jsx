@@ -3,10 +3,12 @@ import Footer from "./components/Footer";
 import './App.css'
 
 function App() {
+  return (
   <>
-  return <PortfolioContainer />;
-  <Footer />;
+    <PortfolioContainer />
+    <Footer />
   </>
+  );
 }
 
 export default App
