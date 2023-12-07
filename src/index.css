@@ -1,6 +1,19 @@
 body {
-  background-image: url('./assets/background.png');
+  background-image: linear-gradient(whitesmoke, #87986A);
   background-size: 100% 100%;
+}
+
+header {
+  font-family: 'Poppins', sans-serif;
+}
+
+main {
+  margin: 50px;
+  padding: 50px;
+}
+
+img {
+  width: 500px;
 }
 
 .icon {
@@ -8,9 +21,46 @@ body {
   margin: 20px 55px;
 }
 
+.nav-tabs {
+  border: none;
+  background-color: whitesmoke;
+}
+
 .navbar a{
-  color: white;
+  color: black;
   font-size: 100%;
   padding: 20px;
   text-decoration: none;
+  background-color: whitesmoke;
+}
+
+#myName {
+  text-align: start;
+  font-size: 75px;
+  margin: 25px;
+  padding: 0px 10px 10px 10px;
+}
+
+.pageName {
+  margin: 40px;
+}
+
+.list-group-item {
+  background-color: transparent;
+  
+  border: none;
+  margin: 25px;
+}
+
+#header {
+  background-color:  whitesmoke;
+}
+
+.list-group {
+  display: flex;
+  justify-content: center;
+}
+
+#message-input {
+  height: 100px;
 }
