@@ -52,13 +52,13 @@ img {
   margin: 25px;
 }
 
-#header {
-  background-color:  whitesmoke;
-}
-
 .list-group {
   display: flex;
   justify-content: center;
+}
+
+#header {
+  background-color:  whitesmoke;
 }
 
 #message-input {
