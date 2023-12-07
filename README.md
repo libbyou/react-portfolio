@@ -1,6 +1,5 @@
-# React + Vite
+# Libby's Portfolio
 
-# pwa-text-editor
 ![Github License](https://img.shields.io/badge/License-Mozilla-yellow.svg)
 
  Deployed Date: December 7, 2023
