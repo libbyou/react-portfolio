@@ -32,17 +32,17 @@ function Contact() {
     e.preventDefault();
 
     // First we check to see if the email is not valid or if the userName is empty. If so we set an error message to be displayed on the page.
-    if (!validateEmail(email)) {
-      setErrorMessage('Email is invalid');
-      // We want to exit out of this code block if something is wrong so that the user can correct it
-      return;
-      // Then we check to see if the password is not valid. If so, we set an error message regarding the password.
-    }
     if ( !name || !message ) {
       setErrorMessage(
         `Field required. Please enter text.`
       );
       return;
+    }
+    if (!validateEmail(email)) {
+      setErrorMessage('Email is invalid');
+      // We want to exit out of this code block if something is wrong so that the user can correct it
+      return;
+      // Then we check to see if the password is not valid. If so, we set an error message regarding the password.
     };
 
     // If everything goes according to plan, we want to clear out the input after a successful registration.
@@ -54,7 +54,7 @@ function Contact() {
   return (
     <div className="container text-center">
       <h1>Send me a message!</h1>
-      <form className="form" onSubmit={handleFormSubmit}>
+      <form className="form row" onSubmit={handleFormSubmit}>
         <input
           value={email}
           name="email"
@@ -75,8 +75,9 @@ function Contact() {
           onChange={handleInputChange}
           type="message"
           placeholder="Message"
+          id="message-input" 
         />
-        <button type="submit">Submit</button>
+        <button className="btn btn-outline-success" type="submit">Submit</button>
       </form>
       {errorMessage && (
         <div>
