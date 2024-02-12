@@ -32,9 +32,9 @@ function Contact() {
     e.preventDefault();
 
     // First we check to see if the email is not valid or if the userName is empty. If so we set an error message to be displayed on the page.
-    if ( !name || !message ) {
+    if (!name || !message) {
       setErrorMessage(
-        `Field required. Please enter text.`
+        `All fields required. Please enter text.`
       );
       return;
     }
@@ -52,39 +52,50 @@ function Contact() {
   };
 
   return (
-    <div className="container text-center">
-      <h1>Send me a message!</h1>
-      <form className="form row" onSubmit={handleFormSubmit}>
-        <input
-          value={email}
-          name="email"
-          onChange={handleInputChange}
-          type="email"
-          placeholder="email"
-        />
-        <input
-          value={name}
-          name="name"
-          onChange={handleInputChange}
-          type="text"
-          placeholder="name"
-        />
-        <input
-          value={message}
-          name="message"
-          onChange={handleInputChange}
-          type="message"
-          placeholder="Message"
-          id="message-input" 
-        />
-        <button className="btn btn-outline-success" type="submit">Submit</button>
-      </form>
-      {errorMessage && (
-        <div>
-          <p className="error-text">{errorMessage}</p>
-        </div>
-      )}
-    </div>
+    <>
+      <h1 className="d-flex justify-content-start m-1">Send me a message!</h1>
+      <div className="container d-flex align-items-center justify-content-center mt-5 pt-5">
+        <form className="form row" onSubmit={handleFormSubmit}>
+          <div className="input-group mb-2">
+            <span className="input-group-text email-span">Email</span>
+            <input
+              value={email}
+              name="email"
+              onChange={handleInputChange}
+              type="email"
+              placeholder="example@email.com"
+              id="email-input"
+            />
+          </div>
+          <div className="input-group mb-2">
+            <span className="input-group-text name-span">Name</span>
+            <input
+              value={name}
+              name="name"
+              onChange={handleInputChange}
+              type="text"
+              placeholder="John Smith"
+              id="name-input"
+            />
+          </div>
+          <input
+            value={message}
+            name="message"
+            onChange={handleInputChange}
+            type="message"
+            placeholder="Message..."
+            id="message-input"
+            className="mb-2"
+          />
+          <button className="btn btn-outline-success submit-button" type="submit">Submit</button>
+        </form>
+        {errorMessage && (
+          <div>
+            <p className="error-text">{errorMessage}</p>
+          </div>
+        )}
+      </div>
+    </>
   );
 }
 

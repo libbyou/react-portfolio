@@ -4,7 +4,8 @@ import Projects from '../pages/Projects';
 import About from '../pages/About';
 import Resume from '../pages/Resume';
 import Contact from '../pages/Contact';
-import Footer from './Footer'
+import Footer from './Footer';
+import Pic from '../assets/profilePic.png';
 
 export default function PortfolioContainer() {
   const [currentPage, setCurrentPage] = useState('About');
@@ -30,12 +31,13 @@ export default function PortfolioContainer() {
       <div id="header">
         <header className="d-flex flex-wrap justify-content-between">
             <h1 id="myName">Libby You</h1>
+            <img id="pic" className="rounded-circle" src={Pic}/>
             {/* We are passing the currentPage from state and the function to update it */}
             <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
         </header>
       </div>
       {/* Here we are calling the renderPage method which will return a component  */}
-      <main className="mx-3">{renderPage()}</main>
+      <main>{renderPage()}</main>
       <Footer />
     </div>
   );

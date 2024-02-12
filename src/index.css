@@ -1,5 +1,5 @@
 body {
-  background-image: linear-gradient(whitesmoke, #87986A);
+  background-image: linear-gradient(whitesmoke, #87986a);
   background-size: 100% 100%;
 }
 
@@ -8,12 +8,12 @@ header {
 }
 
 main {
-  margin: 50px;
+  margin: 25px 250px 250px 250px;
   padding: 50px;
 }
 
 img {
-  width: 500px;
+  width: 668px;
 }
 
 .icon {
@@ -23,7 +23,8 @@ img {
 
 .nav-tabs {
   border: none;
-  background-color: whitesmoke;
+  background-color: #5f6b4a;
+  text-decoration: none;
 }
 
 .navbar a{
@@ -31,18 +32,28 @@ img {
   font-size: 100%;
   padding: 20px;
   text-decoration: none;
-  background-color: whitesmoke;
+  background-color: none;
+}
+
+.navbar a:hover {
+  color: #87986A;
+  border: none;
+  background-color: #5f6b4a;
+  text-decoration: underline;
+}
+
+.navbar a:focus{
+  border: none;
+  text-decoration: underline;
+  color: white;
+  background: none;
 }
 
 #myName {
-  text-align: start;
-  font-size: 75px;
+  text-align: center;
+  font-size: 25px;
   margin: 25px;
   padding: 0px 10px 10px 10px;
-}
-
-.pageName {
-  margin: 40px;
 }
 
 .list-group-item {
@@ -57,10 +68,103 @@ img {
   justify-content: center;
 }
 
+.submit-button {
+  background-color: #5f6b4a;
+}
+
+.submit-button:hover{
+  background-color: white;
+  color: black;
+}
+
+.email-span {
+  width: 100px;
+  background-color: #5f6b4a;
+  border-radius: 10px;
+  border: 3px solid #5f6b4a;
+}
+
+.name-span {
+  width: 100px;
+  background-color: #5f6b4a;
+  border-radius: 10px;
+  border: 3px solid #5f6b4a;
+}
+
+.proficiencies {
+  color: #5f6b4a;
+  text-decoration: underline;
+}
+
+.project-details {
+  border: 2px #5f6b4a solid;
+  border-radius: 10px;
+  background-color: rgba(95, 107, 74, 0.5);
+  
+}
+
+.project-image {
+  border: 2px #87986A solid;
+  filter: drop-shadow(0 0 0.3rem rgb(245, 245, 245));
+}
+
+.project-image:hover {
+  opacity: 0.5;
+}
+
+.project-link {
+  color: whitesmoke;
+}
+
+.project-link:hover {
+  color: #5f6b4a;
+}
+
 #header {
-  background-color:  whitesmoke;
+  background-color: #5f6b4a;
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding-top: 40px;
+  filter: drop-shadow(0 0 0.3rem rgb(135, 152, 106));
+  border-right: 1px groove #87986a;
 }
 
 #message-input {
-  height: 100px;
+  height: 200px;
+  width: 800px;
+  border-radius: 10px;
+  border: 3px solid #5f6b4a;
+}
+
+#pic {
+ width: 75%;
+ margin: 25px;
+ border: 2px groove #87986a;
+ filter: drop-shadow(0 0 0.3rem rgb(135, 152, 106))
+}
+
+#email-input {
+  width: 567px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  border: 3px solid #5f6b4a;
+}
+
+#name-input {
+  width: 567px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  border: 3px solid #5f6b4a;
+}
+
+#embedResume {
+  border: 2px solid #5f6b4a;
+}
+
+#email{
+  color: #5f6b4a;
+  text-decoration: underline;
 }
